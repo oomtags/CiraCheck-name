@@ -1,0 +1,70 @@
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  
+  }
+
+
+@media (max-width: 995px){
+    .sideber{
+        background-color: rgba(0, 0, 0, 0.3) ;
+        backdrop-filter: blur(10px);
+    }
+}
+/************************บนนี้คือโค้ด/ฟั่งชี้น navder ************************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+}
+nav{
+    background: #020024;
+    padding: 2rem;
+    text-align: left;
+    position: sticky;
+    top: 0;
+
+}
+main{
+    padding: 2rem;
+}
+
+nav a{/*ฟ้อน*/
+    text-decoration: none;
+    margin: 0 10    px;
+    position: relative;
+    color: #ffffff;
+}   
+nav a::after{/*เส้นใต้*/
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-image: linear-gradient(to
+    right,#d100ff,#fffc00);
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 25px;
+    transition: .4s;
+}
+nav a:hover::after{/*แอนิเมชั่น เส้นใจใต้*/
+    width: 75%; /*ความกว้างเส้นใต้*/
+}
+
+/************************บนนี้คือโค้ดเอนิเมชั่น navder และแถบสี************************/
+.text-primary {
+    color: #ffe600 !important;
+  }
+  
+a.text-primary:hover, a.text-primary:focus {
+    color: #fffb00 !important;
+}
